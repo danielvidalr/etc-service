@@ -21,10 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 8
-      uses: guillonapa/action-maven-cli/jdk8@master
+    - name: Set up JDK 11
+      uses: guillonapa/action-maven-cli/jdk11@master
       with:
-        java-version: '8'
+        java-version: '11'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
