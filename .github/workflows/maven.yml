@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build Docker image
-        run:  docker bulid -t etc-service .
+        run:  docker bulid -f etc-service .
       - name: Build Java project
         run:  docker run --rm -v $PWD:/usr/src/app -w /usr/src/app etc-service mvn package
       - name: Archive artifacts
